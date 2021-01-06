@@ -1,8 +1,10 @@
 import { createStore, applyMiddleware } from "redux";
 import logger from "redux-logger";
-import reducer from "./reducer";
+import boardReducer from "../reducers/boardReducer";
+import exampleBoard from '../data/exampleBoard';
 
-export default function configureStore(initialState) {
-  const store = createStore(reducer, initialState, applyMiddleware(logger));
-  return store;
-}
+export default createStore(
+  boardReducer,
+  { exampleBoard: exampleBoard },
+  applyMiddleware(logger)
+  );
