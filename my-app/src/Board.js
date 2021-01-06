@@ -1,12 +1,12 @@
 import React from 'react';
-import Row from './Row';
+import Row from './modules/containers/rowContainer';
 
-let Board = ({exampleBoard}) => {
-  console.log('board: ', exampleBoard);
+let Board = ({exampleBoard, result}) => {
+  console.log('board: ', exampleBoard, 'results: ', result);
   return (
-  <div>
-    {exampleBoard.map(row => (
-      <Row row={row}/>
+  <div className='board'>
+    {exampleBoard.map((row, i) => (
+      <Row className='row' row={row} key={i}/>
     ))}
   </div>
 )};

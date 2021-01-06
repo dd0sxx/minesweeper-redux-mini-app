@@ -4,7 +4,10 @@ import boardReducer from "../reducers/boardReducer";
 import exampleBoard from '../data/exampleBoard';
 
 export default createStore(
-  boardReducer,
-  { exampleBoard: exampleBoard },
+    boardReducer,
+  {
+    exampleBoard: exampleBoard,
+    results: null
+  },
   applyMiddleware(logger)
   );

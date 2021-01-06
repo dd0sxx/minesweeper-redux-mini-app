@@ -5,3 +5,29 @@ body {
 .App {
   color: green;
 }
+.App-header {
+  text-align: center;
+}
+
+.board {
+  width: 75%;
+  margin: auto;
+  text-align: center;
+  padding-bottom: 3%;
+  padding: 2.5%;
+}
+
+.row {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+}
+
+.cell {
+  margin:auto;
+  padding: 2.5%;
+}
+
+.game-over {
+  color: red;
+}
