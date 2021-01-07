@@ -6,28 +6,28 @@ var handleZeroClick = (cell, x, y, board, value) => {
   if (value === 0) {
     console.log(value, x, y)
     if (y > 0) {
-      if (board[x][y - 1].value === 0) { newExample[x][y - 1].revealed = true;}
+      newExample[x][y - 1].revealed = true;
     }
     if (y < 9) {
-      if (board[x][y + 1].value === 0) { newExample[x][y + 1].revealed = true; }
+      newExample[x][y + 1].revealed = true;
     }
     if (x > 0 && y > 0) {
-      if (board[x - 1][y - 1].value === 0) { newExample[x - 1][y - 1].revealed = true; }
+      newExample[x - 1][y - 1].revealed = true;
     }
     if (x > 0){
-      if (board[x - 1][y].value === 0) { newExample[x - 1][y].revealed = true; }
+       newExample[x - 1][y].revealed = true;
     }
     if (x > 0 && y < 9) {
-      if (board[x - 1][y + 1].value === 0) {newExample[x - 1][y + 1].revealed = true; }
+      newExample[x - 1][y + 1].revealed = true;
     }
     if (x < 9 && y > 0) {
-      if (board[x + 1][y - 1].value === 0) {newExample[x + 1][y - 1].revealed = true; }
+      newExample[x + 1][y - 1].revealed = true;
     }
     if(x < 9) {
-      if (board[x + 1][y].value === 0) {newExample[x + 1][y].revealed = true; }
+      newExample[x + 1][y].revealed = true;
     }
     if (x < 9 && y < 9) {
-      if (board[x + 1][y + 1].value === 0) { newExample[x + 1][y + 1].revealed = true; }
+       newExample[x + 1][y + 1].revealed = true;
     }
   }
   return ({
