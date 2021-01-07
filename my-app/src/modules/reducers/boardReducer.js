@@ -3,7 +3,6 @@ import exampleBoard from '../data/exampleBoard';
 
 
 let boardReducer = (state = exampleBoard, action) => {
-  console.log(action);
   switch (action.type) {
   case 'CHANGE_BOARD':
     return action.board;
@@ -13,11 +12,17 @@ let boardReducer = (state = exampleBoard, action) => {
         results: 'Game Over'
       });
 
+      case 'ZERO_CLICK':
+        return Object.assign({}, state, {
+          exampleBoard: action.payload.newExample,
+          results: null
+        });
+
       case 'RETRY':
       return Object.assign({}, state, {
-        exampleBoard: exampleBoard,
         results: null
       });
+
   default:
     return state;
   }

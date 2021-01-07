@@ -10,7 +10,7 @@ body {
 }
 
 .board {
-  width: 75%;
+  width: 80%;
   margin: auto;
   text-align: center;
   padding-bottom: 3%;
@@ -20,12 +20,22 @@ body {
 .row {
   display: flex;
   flex-direction: row;
-  justify-content: space-around;
 }
 
 .cell {
   margin:auto;
+  border: 3px solid darkgrey;
+  background-color: black;
   padding: 2.5%;
+  width: 8%;
+  height: 8%;
+}
+
+.not-revealed {
+  color:black;
+}
+
+.revealed {
 }
 
 .game-over {
