@@ -10,7 +10,8 @@ export default createStore(
     exampleBoard: exampleBoard,
     results: null,
     size: 10,
-    mines: 10
+    mines: 10,
+    win: false
   },
   applyMiddleware(logger)
   );

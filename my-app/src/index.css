@@ -11,6 +11,7 @@ body {
 
 .board {
   max-width: 600px;
+  max-height: 600px;
   margin: auto;
   text-align: center;
   padding-bottom: 3%;
@@ -28,7 +29,7 @@ body {
   background-color: black;
   padding: 2.5%;
   width: 8%;
-  height: 8%;
+  height: auto;
 }
 
 .slide-div {
@@ -50,7 +51,7 @@ body {
   background-color: rgb(233, 232, 232);
   padding: 2.5%;
   width: 8%;
-  height: 8%;
+  height: auto;
 }
 
 .not-revealed {
@@ -66,4 +67,7 @@ body {
 
 .game-over {
   color: red;
+}
+.win {
+  color: green;
 }

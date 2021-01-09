@@ -20,7 +20,9 @@ let boardReducer = (state = exampleBoard, action) => {
 
       case 'RETRY':
       return Object.assign({}, state, {
-        results: null
+        results: null,
+        exampleBoard: action.exampleBoard,
+        win: false
       });
 
       case 'RESIZE_MINES':
@@ -32,6 +34,12 @@ let boardReducer = (state = exampleBoard, action) => {
           return Object.assign({}, state, {
             size: action.payload.size
           });
+
+          case 'WIN':
+            return Object.assign({}, state, {
+              win: true,
+              exampleBoard: action.exampleBoard
+            })
 
   default:
     return state;

@@ -8,6 +8,7 @@ let mapStateToProps = (state) => ({
   results: state.results,
   mines: state.mines,
   size: state.size,
+  win: state.win
 });
 
 let mapDispatchToProps = (dispatch) => ({

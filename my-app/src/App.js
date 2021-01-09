@@ -4,10 +4,16 @@ import 'react-bootstrap-range-slider/dist/react-bootstrap-range-slider.css';
 import RangeSlider from 'react-bootstrap-range-slider';
 
 
-function App({results, retryAction, mines, size, handleResizeSize, handleResizeMines}) {
+function App({results, retryAction, mines, size, handleResizeSize, handleResizeMines, win}) {
   let [value, setValue] = useState(0);
   let [value2, setValue2] = useState(1);
-  return (results === 'Game Over' ?
+  return (
+
+    win ? <div className='win'>
+    <h2>You Won!</h2>
+    <h4 onClick={retryAction}>retry?</h4>
+  </div> :
+    results === 'Game Over' ?
   <div className='game-over'>
     <h2>Game Over</h2>
     <h4 onClick={retryAction}>retry?</h4>
