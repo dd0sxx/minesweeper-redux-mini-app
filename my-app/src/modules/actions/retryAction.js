@@ -1,4 +1,4 @@
-import exampleBoard from '../data/exampleBoard';
+
 
 var retryAction = (e) => ({
 

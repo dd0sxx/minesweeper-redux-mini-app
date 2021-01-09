@@ -8,7 +8,9 @@ export default createStore(
     boardReducer,
   {
     exampleBoard: exampleBoard,
-    results: null
+    results: null,
+    size: 10,
+    mines: 10
   },
   applyMiddleware(logger)
   );
